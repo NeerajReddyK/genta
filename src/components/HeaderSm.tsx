@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const About = () => {
+const HeaderSm = () => {
   return (
     <>
       <div className="flex items-center justify-between">
@@ -24,4 +24,4 @@ const About = () => {
     </>
   )
 }
-export default About;
+export default HeaderSm;

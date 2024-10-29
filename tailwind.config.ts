@@ -9,12 +9,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        fontFamily: {
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-          // @ts-ignore
-          poppins: ['Poppins', 'sans-serif'],
-        }
+        
       },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+        pretendard: ['pretendard', 'sans-serif'],
+      },
+      lineHeight: {
+        'company': '190.94px',
+        'compnay-m': '76.38px',
+        'company-desc': '36.24px',
+      },
+      letterSpacing: {
+        'company': '6.4px',
+        'company-m': '2.56px',
+      },
+
     },
   },
   plugins: [],
