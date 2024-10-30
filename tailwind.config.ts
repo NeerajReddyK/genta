@@ -14,6 +14,8 @@ const config: Config = {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
         pretendard: ['pretendard', 'sans-serif'],
+        pretendardmd: ['pretendard-md', 'sans-serif'],
+        pretendardlt: ['pretendard-lt', 'sans-serif'],
       },
       lineHeight: {
         'company': '190.94px',

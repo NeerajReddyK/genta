@@ -5,7 +5,18 @@
 @font-face {
   font-family: 'pretendard';
   src: url('/fonts/woff2/Pretendard-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-size: normal;
+}
+@font-face {
+  font-family: 'pretendard-md';
   src: url('/fonts/woff2/Pretendard-Medium.woff2') format('woff2');
+  font-weight:normal;
+  font-size:normal;
+}
+@font-face {
+  font-family: 'pretendard-lt';
+  src: url('/fonts/woff2/Pretendard-Light.woff2') format('woff2');
   font-weight: normal;
   font-size: normal;
 }
