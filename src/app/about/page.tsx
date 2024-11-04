@@ -1,8 +1,17 @@
-import HomeSm2 from "@/components/HomeSm2";
+import AboutLs from "@/components/AboutLg";
+import AboutSm from "@/components/AboutSm";
 
-const About = () => {
+const AboutPageMobile = () => {
   return (
-    <HomeSm2 />
- )
-}
-export default About;
+    <>
+      <div className="hidden md:block">
+        <AboutLs />
+      </div>
+      <div className="block md:hidden">
+        <AboutSm />
+      </div>
+    </>
+ );
+};
+
+export default AboutPageMobile;

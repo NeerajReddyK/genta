@@ -9,7 +9,7 @@ export default function Home() {
 return (
     <div>
       <div className="relative h-screen w-screen overflow-hidden text-white bg-black">
-        <div className="absolute z-10 w-full">
+        <div className="absolute z-10 w-full ">
           <div className="hidden md:block">
             <HeaderLg />
           </div>
