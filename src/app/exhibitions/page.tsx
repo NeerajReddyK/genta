@@ -1,6 +1,8 @@
+import ExhibitionsLg from "@/components/ExhibitionsLg";
+
 const Exhibitions = () => {
   return(
-    <p>Hello</p>
+    <ExhibitionsLg />
   )
 }
 export default Exhibitions;
