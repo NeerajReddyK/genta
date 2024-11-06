@@ -1,6 +1,8 @@
+import HeaderSm from "@/components/HeaderSm";
+
 const Contact = () => {
   return (
-    <p>Hello</p>
+    <HeaderSm />
   )
 }
 export default Contact;

@@ -23,7 +23,7 @@ const ExhibitionsSm = () => {
               sizes="100vw"
             />
           </div>
-          <div className="absolute bottom-0 left-0 w-full ml-[28px] z-10 mb-[57px]">
+          <div className="absolute bottom-0 left-0 w-full pl-[28px] z-10 mb-[57px]">
             <h1 className="text-[24px] font-bold leading-[28.64px] spacing-[0.96px] mb-[24px]">
               {exhibition.title}
             </h1>
@@ -36,7 +36,7 @@ const ExhibitionsSm = () => {
         </div>
 
         {/* screen-2 */}
-        <div className="space-y-[24px] mt-[59px] ml-[28px] mb-[60px]">
+        <div className="space-y-[24px] mt-[59px] px-[28px] mb-[60px]">
           <div className="flex items-start gap-[8px] ">
             <Calendar className="w-[16px] h-[16px] mt-[2px] stroke-[1.5]"/>
             <p>{exhibition.exhibitionFromDate} - {exhibition.exhibitionToDate}</p>
@@ -64,7 +64,7 @@ const ExhibitionsSm = () => {
         </div>
 
         {/* screen-2 featured artworks */}
-        <div className="ml-[27px] mr-[25px]">
+        <div className="px-[26px]">
           <h2 className="text-[16px] mb-[26px] font-semibold leading-[38px] tracking-[0.96px]">Featured Artworks</h2>
           <div className="grid grid-cols-2 gap-y-[42px] gap-x-[24px]">
             {artworks.slice(0, 4).map((artwork) => (
