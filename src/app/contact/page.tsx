@@ -1,8 +1,16 @@
+import ContactForm from "@/components/ContactForm";
+import FooterSm from "@/components/FooterSm";
 import HeaderSm from "@/components/HeaderSm";
 
 const Contact = () => {
   return (
-    <HeaderSm />
+    <div className="min-h-screen flex flex-col">
+      <HeaderSm />
+      <div className="flex-1">
+        <ContactForm />
+      </div>
+      <FooterSm />
+    </div>
   )
 }
 export default Contact;
