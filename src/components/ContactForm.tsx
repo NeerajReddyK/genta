@@ -16,6 +16,7 @@ const ContactForm = () => {
       ...prev,
       [name]: value
     }))
+    console.log("Data Submitted: ", formData);
   }
 
   return (
