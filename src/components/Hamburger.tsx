@@ -2,21 +2,34 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { use, useEffect, useState } from "react";
+import {ChevronDown} from "lucide-react"
 
 const Hamburger = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if(showMenu) {
+      document.body.classList.add('overflow-hidden');
+    } else {
+      document.body.classList.remove('overflow-hidden');
+    }
+    
+    return () => {
+      document.body.classList.remove('overflow-hidden')
+    }
+  }, [showMenu])
   
   const handleMenu = () => {
     return showMenu ? setShowMenu(false) : setShowMenu(true);
   }
 
   const menuItems = [
-    {label: 'About', href: '/about'},
-    {label: 'Art', href: '/art'},
-    {label: 'Exhibitions', href: '/exhibitions'},
-    {label: 'Contact', href: '/contact'},
-    {label: 'Work', href: '/work'},
+    {label: 'ABOUT', href: '/about'},
+    {label: 'ART', href: '/art'},
+    {label: 'EXHIBITIONS', href: '/exhibitions'},
+    {label: 'CONTACT', href: '/contact'},
   ]
 
   return (
@@ -39,12 +52,42 @@ const Hamburger = () => {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="text-white text-[20px] leading-[52px] tracking-[0.8px] font-medium"
+                  className="text-white text-[24px] leading-[52px] tracking-[0.96px] font-semibold w-fit"
                   onClick={handleMenu}
                 > 
                   {item.label}
                 </Link>
               ))}
+
+              <div className="relative">
+                <button 
+                  onClick={() => setIsOpen(!isOpen)}
+                  className="flex items-center font-semibold text-[24px] leading-[28.64px] tracking-[0.96px] pt-[10px]"
+                >
+                  <span className="pr-2">WORK</span>
+                  <ChevronDown
+                    className={`h-4 w-4 transition-transform ${
+                      isOpen ? 'rotate-180' : ''
+                    }`}
+                  />
+                </button>
+                
+                {isOpen && (
+                  <div className="flex flex-col opacity-70 pt-[34px] text-[20px] font-medium leading-[23.87px] tracking-[0.8px]">
+                    <Link
+                      href='/consulting'
+                    >
+                      CONSULTING
+                    </Link>
+                    <Link
+                      href='/docent'
+                      className="pt-[27px]"
+                    >
+                      DOCENT
+                    </Link>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
           </>
