@@ -85,7 +85,7 @@ const Consulting = () => {
               Strategy
             </p>
             <p className="pt-[18px] text-center px-[40px]">
-              Customized strategies tailored to our client's needs
+              Customized strategies tailored to our client&apos;s needs
             </p>
           </div>
  
